@@ -26,3 +26,48 @@ This end-to-end data analytics project provides an executive-level market resear
 * Across every single age bracket, Physical Store Visits remain the dominant transaction medium, peaking heavily with the 44-53 age tier. 
 * Direct-mail catalogs are obsolete, proving the business can safely reallocate that budget to digital ad spend.
 
+```sql
+SELECT Age,
+CASE WHEN Income is NULL THEN 'Unknown'
+WHEN Income  < 30000 THEN 'Low Income'
+WHEN Income  <= 70000 THEN 'Medium Income'
+ELSE 'High Income'
+END AS Clean_Income_Group,   
+CASE WHEN marital_married = 1 THEN 'Married'
+WHEN marital_single = 1 THEN 'Single'
+WHEN marital_together = 1 THEN 'Together'
+WHEN marital_widow = 1 THEN 'Widow'
+ELSE 'Unknown'
+END AS Clean_Marital_Status,
+CASE WHEN education_Basic = 1 THEN 'Low Level Education'
+WHEN 'education_2n Cycle' = 1 THEN 'Mid Level Education'
+WHEN education_Graduation = 1 THEN 'Mid Level Education'
+WHEN education_Master = 1 THEN 'Advanced (Masters)'
+WHEN education_PhD = 1 THEN 'Advanced (PhD)'
+ELSE 'Unknown'
+END AS Clean_Education_Level,
+CASE WHEN AcceptedCmp1 = 1 THEN 'Accepted' ELSE 'No Response' 
+END AS Campaign_1,
+CASE WHEN AcceptedCmp2 = 1 THEN 'Accepted' ELSE 'No Response' 
+END AS Campaign_2,
+CASE WHEN AcceptedCmp3 = 1 THEN 'Accepted' ELSE 'No Response' 
+END AS Campaign_3,
+CASE WHEN AcceptedCmp4 = 1 THEN 'Accepted' ElSE 'No Response' 
+END AS Campaign_4,
+CASE WHEN AcceptedCmp5 = 1 THEN 'Accepted' ELSE 'No Reponse' 
+END AS Campaign_5,
+CASE WHEN Kidhome > 0 AND Teenhome = 0 THEN 'Small kids only'
+WHEN Kidhome = 0 AND Teenhome > 0 THEN 'Teenagers Only'
+WHEN Kidhome > 0 AND Teenhome > 0 THEN 'Both kids and Teens'
+ELSE 'No Children'
+END AS Household_Type,
+NumWebPurchases,
+NumCatalogPurchases,
+NumStorePurchases,
+MntWines,
+MntFruits,
+MntFishProducts,
+MntMeatProducts,
+MntSweetProducts,
+MntGoldProds,
+FROM `graphite-dynamo-495620-d0.ifood.Marketing Analysis`
