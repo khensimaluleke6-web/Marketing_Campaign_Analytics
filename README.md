@@ -75,14 +75,14 @@ MntSweetProducts,
 MntGoldProds,
 FROM `graphite-dynamo-495620-d0.ifood.Marketing Analysis`
 ```
-Query Table
+Query Results Table
 <img width="1920" height="1080" alt="Screenshot 2026-06-25 140731" src="https://github.com/user-attachments/assets/5e00da46-9073-492b-9d41-badace0eb5e0" />
 
-Campaign preference according to age, marital status, education level and income groups.
+Pivot Table and Slicers
 <img width="1920" height="1080" alt="Screenshot 2026-06-28 201610" src="https://github.com/user-attachments/assets/da0cf84c-d7fd-4720-8213-3a10489fd3ac" />
 
-Pivot Table and Slicers
+Campaign preference according to age, marital status, education level and income groups.
 <img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/8759ab3e-062d-4668-9326-5651a978526c" />
 
-Purchase Medium Preference
+Customers' Purchase Medium Preference
 <img width="1920" height="1080" alt="Screenshot 2026-06-28 214028" src="https://github.com/user-attachments/assets/7e15197e-a06d-4a79-bebf-df4619fa3ef2" />
