@@ -37,7 +37,10 @@ CASE WHEN marital_married = 1 THEN 'Married'
 WHEN marital_single = 1 THEN 'Single'
 WHEN marital_together = 1 THEN 'Together'
 WHEN marital_widow = 1 THEN 'Widow'
-ELSE 'Unknown'
+ELSE 'Unknown'<img width="1920" height="1080" alt="Screenshot 2026-06-28 220847" src="https://github.com/user-attachments/assets/1c851f45-af00-4dfe-93d3-77ffddcac91e" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-28 201610" src="https://github.com/user-attachments/assets/6912199a-48da-4ec8-997a-e612c85f872c" />
+<img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/aac747f7-8dfe-4df2-927a-60fd24691a73" />
+
 END AS Clean_Marital_Status,
 CASE WHEN education_Basic = 1 THEN 'Low Level Education'
 WHEN 'education_2n Cycle' = 1 THEN 'Mid Level Education'
@@ -71,3 +74,15 @@ MntMeatProducts,
 MntSweetProducts,
 MntGoldProds,
 FROM `graphite-dynamo-495620-d0.ifood.Marketing Analysis`
+```
+Query Table
+<img width="1920" height="1080" alt="Screenshot 2026-06-25 140731" src="https://github.com/user-attachments/assets/5e00da46-9073-492b-9d41-badace0eb5e0" />
+
+Campaign preference according to age, marital status, education level and income groups.
+<img width="1920" height="1080" alt="Screenshot 2026-06-28 201610" src="https://github.com/user-attachments/assets/da0cf84c-d7fd-4720-8213-3a10489fd3ac" />
+
+Pivot Table and Slicers
+<img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/8759ab3e-062d-4668-9326-5651a978526c" />
+
+Purchase Medium Preference
+<img width="1920" height="1080" alt="Screenshot 2026-06-28 214028" src="https://github.com/user-attachments/assets/7e15197e-a06d-4a79-bebf-df4619fa3ef2" />
